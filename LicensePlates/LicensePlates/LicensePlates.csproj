@@ -11,6 +11,10 @@
 
   <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.All" Version="2.0.3" />
+ <PackageReference Include="Microsoft.AspNetcore" Version="2.0.1" />
+ <PackageReference Include="Microsoft.EntityFrameWorkCore" Version="2.0.1" />
+ <PackageReference Include="Microsoft.EntityFrameWorkCore.SqlServer" Version="2.0.1" />
+ <PackageReference Include="Microsoft.EntityFrameWorkCore.Tools" Version="2.0.1" />
   </ItemGroup>
 
 </Project>

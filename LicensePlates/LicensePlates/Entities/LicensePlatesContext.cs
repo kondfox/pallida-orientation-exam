@@ -1,11 +1,16 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+﻿using Microsoft.EntityFrameworkCore;
+using LicensePlates.Models;
 
 namespace LicensePlates.Entities
 {
-    public class LicensePlatesContext
+
+    public class LicensePlatesContext : DbContext
     {
+        public LicensePlatesContext(DbContextOptions<LicensePlatesContext> options) : base(options)
+        {
+
+        }
+
+        public DbSet<LicensePlate> LicensePlates { get; set; }
     }
 }
