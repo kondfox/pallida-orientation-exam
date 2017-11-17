@@ -1,7 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using LicensePlates.Models;
+using title.Models;
 
-namespace LicensePlates.Entities
+namespace title.Entities
 {
 
     public class LicensePlatesContext : DbContext

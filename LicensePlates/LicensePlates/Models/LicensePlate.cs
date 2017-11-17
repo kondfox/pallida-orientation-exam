@@ -1,4 +1,4 @@
-﻿namespace LicensePlates.Models
+﻿namespace title.Models
 {
     public class LicensePlate
     {

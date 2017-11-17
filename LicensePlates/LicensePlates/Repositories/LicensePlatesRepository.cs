@@ -1,9 +1,9 @@
-﻿using LicensePlates.Entities;
-using LicensePlates.Models;
+﻿using title.Entities;
+using title.Models;
 using System.Collections.Generic;
 using System.Linq;
 
-namespace LicensePlates.Repositories
+namespace title.Repositories
 {
     public class LicensePlatesRepository
     {
@@ -18,5 +18,21 @@ namespace LicensePlates.Repositories
         {
             return LicensePlatesContext.LicensePlates.ToList();
         }
+
+        public List<LicensePlate> PoliceCars()
+        {
+            var policeCars = from LicensePlate in LicensePlatesContext.LicensePlates
+                             where LicensePlate.Plate.StartsWith = "RB"
+                             select LicensePlate;
+        }
+
+        public List<LicensePlate> DiplomatCars()
+        {
+            var diplomatCars = from LicensePlate in LicensePlatesContext.LicensePlates
+                               where LicensePlate.Plate.StartsWith = "DT"
+                               select LicensePlate;
+        }
+
+
     }
 }

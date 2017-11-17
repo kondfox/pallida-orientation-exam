@@ -2,11 +2,11 @@
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.DependencyInjection;
-using LicensePlates.Repositories;
-using LicensePlates.Entities;
+using title.Repositories;
+using title.Entities;
 using Microsoft.EntityFrameworkCore;
 
-namespace LicensePlates
+namespace title
 {
     public class Startup
     {
