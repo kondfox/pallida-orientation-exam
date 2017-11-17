@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
 using Microsoft.AspNetCore.Mvc;
 using LicensePlates.Models;
 using LicensePlates.Repositories;
@@ -11,9 +8,18 @@ namespace LicensePlates.Controllers
 {
     public class LicensePlatesController : Controller
     {
-        public IActionResult Index()
+        LicensePlatesRepository LicensePlatesRepository;
+
+        public LicensePlatesController(LicensePlatesRepository licensePlatesRepository)
         {
-            return View();
+            LicensePlatesRepository = licensePlatesRepository;
+        }
+
+        [HttpGet]
+        [Route("/")]
+        public IEnumerable<LicensePlate> ListPosts()
+        {
+            return LicensePlatesRepository.ListPosts();
         }
     }
 }
