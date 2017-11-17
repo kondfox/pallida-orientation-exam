@@ -1,0 +1,29 @@
+﻿@model ICollection<LicensePlates.Models.LicensePlate>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" type="text/css" href="@Url.Content("~/css/StyleSheet.css")" />
+</head>
+<body>
+    <table>
+        <tr>
+            <td>Plate</td>
+            <td>Car brand</td>
+            <td>Car model</td>
+            <td>Color</td>
+            <td>Year</td>
+        </tr>
+        @foreach (var item in Model)
+            {
+            <tr>
+                <td>@item.Id</td>
+                <td>@item.Plate</td>
+                <td>@item.CarBrand</td>
+                <td>@item.CarModel</td>
+                <td>@item.Color</td>
+                <td>@item.Year</td>
+            </tr>
+        }
+    </table>
+</body>
+</html>

@@ -17,9 +17,26 @@ namespace LicensePlates.Controllers
 
         [HttpGet]
         [Route("/")]
-        public IEnumerable<LicensePlate> ListPosts()
+        public IActionResult List() 
         {
-            return LicensePlatesRepository.ListPosts();
+            return View(LicensePlatesRepository.GetList());
         }
+
+       
     }
+
+        //[HttpGet]
+        //[Route("/search")]
+
+        //[HttpGet]
+        //[Route("/search/{brand}")]
+
+        //[HttpGet]
+        //[Route("/api/search/{brand}")]
+        //public IActionResult BrandSearch([FromBody] BrandSearch brandSearch, string brand)
+        //{
+
+        //}
+
+    
 }

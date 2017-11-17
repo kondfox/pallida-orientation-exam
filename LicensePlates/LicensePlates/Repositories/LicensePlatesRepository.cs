@@ -14,7 +14,7 @@ namespace LicensePlates.Repositories
             LicensePlatesContext = licensePlatesContext;
         }
 
-        public List<LicensePlate> ListPosts()
+        public List<LicensePlate> GetList()
         {
             return LicensePlatesContext.LicensePlates.ToList();
         }

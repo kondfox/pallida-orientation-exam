@@ -1,0 +1,17 @@
+﻿table {
+    background-color: lightyellow;
+    border-style: solid;
+    font-weight: bolder;
+    padding: 10px;
+    text-align: left;
+}
+
+td {
+    border: solid 1px black;
+    padding: 5px;
+}
+
+table tr:first-child td {
+    font-size: x-large;
+    padding: 15px;
+}
